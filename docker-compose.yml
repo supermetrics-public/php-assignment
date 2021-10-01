@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  sm_assignment:
+    image: php_assignment:latest
+    container_name: php_assignment
+    restart: "no"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: local
+    ports:
+      - "7777:80"
+
+networks:
+  default:
+    name: sm_assignment
