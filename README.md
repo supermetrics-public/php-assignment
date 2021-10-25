@@ -12,11 +12,10 @@ You should be running PHP 8.0+, the latest version of composer and available to 
 
 ## Local setup
 
-**1. Run composer install:**
-To set up the dependencies run `composer install` the within project's root directory.
+**1. Run docker-compose:**
+To build the container to run the assignment in, run command `docker-compose up --build`. This will create container `php_assignment` in Docker project `supermetrics`.
 
-**2. Run application:**
-To run the app: :`composer serve`
+The container will be listening on port `7777` on your `localhost`.
 
 ## Run application
 Application can be reached from the localhost: 
@@ -26,7 +25,14 @@ Application can be reached from the localhost:
 
 **Run tests:**
 
-Run `php ./vendor/bin/phpunit`
+1. **Connect to container:**
+Connect to container by running command `docker exec -it php_assignment /bin/bash`.
+
+2. **Change path:**
+Previous command should take you to path `/app`, but make sure of that by running command `cd /app`.
+
+4. **Run tests:**
+Run the tests with command `./vendor/bin/phpunit`.
 
 ## Notes about the API endpoints
 
