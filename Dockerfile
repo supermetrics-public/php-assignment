@@ -12,7 +12,7 @@ ENV APACHE_DOCUMENT_ROOT="/app/public"
 
 RUN apt-get update -y \
     && apt-get upgrade -y \
-    && apt-get install -y memcached libmemcached-dev libmemcached-tools libzip-dev
+    && apt-get install -y git memcached libmemcached-dev libmemcached-tools libzip-dev unzip
 
 RUN pecl install memcached
 
