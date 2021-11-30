@@ -19,23 +19,7 @@ To build the container to run the assignment in, run command `docker-compose up 
 
 The container will be listening on port `7777` on your `localhost`.
 
-**Note:** Locally change files will not be updated to the Docker container automatically as mirroring is not enabled. This means you will need to run `docker-compose` again to update the files inside the container. If you wish to enable mirroring, you can edit `/docker-compose.yml` by adding [volumes](https://docs.docker.com/compose/compose-file/compose-file-v3/#volume-configuration-reference) configuration.*
-
-If you enable mirroring, you likely need to run `composer install` inside the container manually.
-
-An example:
-
-```yaml
-version: '3.9'
-
-services:
-  sm_assignment:
-    ...
-    volumes:
-      - .:/app
-```
-
-_\*) Please note that Linux systems may have issues with mirroring. Mirroring should work fine with macOS and Windows. Unfortunately we can't provide help with mirroring related issues for this assignment._
+**Note:** Locally change files will not be updated to the Docker container automatically as mirroring is not enabled. This means you will need to run `docker-compose` again to update the files inside the container.
 
 ## Run application
 Application can be reached from the localhost: 
