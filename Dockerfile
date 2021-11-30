@@ -2,7 +2,7 @@
 #
 # Base install
 #
-FROM --platform=linux/amd64 php:8.0-apache as base
+FROM php:8.0-apache as base
 
 LABEL vendor="Supermetrics"
 

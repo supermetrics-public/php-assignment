@@ -12,10 +12,28 @@ You should be running PHP 8.0+, the latest version of composer and available to 
 
 ## Local setup
 
-**1. Run docker-compose:**
+**1. Setup .env file:** Copy `/.env.example` to `/.env`. Add required settings there. Finding out the required settings is part of the assignment.
+
+**2. Run docker-compose:**
 To build the container to run the assignment in, run command `docker-compose up --build`. This will create container `php_assignment` in Docker project `supermetrics`.
 
 The container will be listening on port `7777` on your `localhost`.
+
+**Note:** If you change files locally, they will not be updated to the Docker container automatically as we have not enabled mirroring by default. If you wish to enable mirroring, you can edit `/docker-compose.yml` by adding [volumes](https://docs.docker.com/compose/compose-file/compose-file-v3/#volume-configuration-reference) configuration.*
+
+An example:
+
+```yaml
+version: '3.9'
+
+services:
+  sm_assignment:
+    ...
+    volumes:
+      - .:/app
+```
+
+_\*) Please note that Linux systems may have issues with mirroring. Mirroring should work fine with MacOS and Windows._
 
 ## Run application
 Application can be reached from the localhost: 
