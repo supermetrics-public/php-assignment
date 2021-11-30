@@ -33,7 +33,7 @@ services:
       - .:/app
 ```
 
-_\*) Please note that Linux systems may have issues with mirroring. Mirroring should work fine with MacOS and Windows._
+_\*) Please note that Linux systems may have issues with mirroring. Mirroring should work fine with macOS and Windows._
 
 ## Run application
 Application can be reached from the localhost: 
