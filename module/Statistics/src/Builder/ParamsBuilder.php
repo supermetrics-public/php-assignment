@@ -21,8 +21,8 @@ class ParamsBuilder
      */
     public static function reportStatsParams(DateTime $date): array
     {
-        $startDate = (clone $date)->modify('first day of this month');
-        $endDate   = (clone $date)->modify('last day of this month');
+        $startDate = (clone $date)->modify('first day of this month')->setTime(0, 0, 0);
+        $endDate   = (clone $date)->modify('last day of this month')->setTime(23, 59, 59);
 
         return [
             (new ParamsTo())
