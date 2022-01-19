@@ -9,6 +9,9 @@ services:
       context: ./
       dockerfile: Dockerfile
       target: local
+    volumes:
+      - ./public:/app/public:rw
+      - ./module:/app/module:rw
     ports:
       - "7777:80"
 
